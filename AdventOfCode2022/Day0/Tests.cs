@@ -15,34 +15,25 @@ public class Tests
     }
 
     [Theory]
-    [InlineData("199,200,208,210,200,207,240,269,260,263", 7)]
-    [InlineData(null, 1342)]
-    public void Part1(string? input, int? expected)
+    [InlineData("199", 0)]
+    [InlineData(null, 0)]
+    public void Part1(string? input, int expected)
     {
         _testOutputHelper.WriteLine(_realData.FirstOrDefault());
         var lines = input != null ? input.Split(',') : _realData;
         var result = new Solver().Execute(lines, false);
-
-        if (expected != null)
-        {
-            Assert.Equal(expected.Value, result);
-        }
+        Assert.Equal(expected, result);
     }
     
     [Theory]
-    [InlineData("199,200,208,210,200,207,240,269,260,263", 7)]
-    [InlineData(null, 1342)]
-    public void Part2(string? input, int? expected)
+    [InlineData("199,200,208,210,200,207,240,269,260,263", 0)]
+    [InlineData(null, 0)]
+    public void Part2(string? input, int expected)
     {
         _testOutputHelper.WriteLine(_realData.FirstOrDefault());
         var lines = input != null ? input.Split(',') : _realData;
         var result = new Solver().Execute(lines, false);
-
-        if (expected != null)
-        {
-            Assert.Equal(expected.Value, result);
-        }
+        Assert.Equal(expected, result);
     }
-    
 }
 
