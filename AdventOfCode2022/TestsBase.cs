@@ -8,4 +8,9 @@ public abstract class TestsBase
     {
         return File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), $"Day{Day}", "input.txt"));
     }
+    
+    public string[] Sample()
+    {
+        return File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), $"Day{Day}", "sample.txt"));
+    }
 }
