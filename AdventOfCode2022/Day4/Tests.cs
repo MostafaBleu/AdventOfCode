@@ -9,28 +9,24 @@ public class Tests : TestsBase
     [Fact]
     public void Part1_Example()
     {
-        var result = SolverPart1.Execute(Sample());
-        Assert.Equal(2, result);
+        Assert.Equal(2, SolverPart1.Execute(Sample()));
     }
     
     [Fact]
     public void Part1_Real()
     {
-        var result = SolverPart1.Execute(Inputs());
-        Assert.Equal(485, result);
+        Assert.Equal(485, SolverPart1.Execute(Inputs()));
     }
     
     [Fact]
     public void Part2_Example()
     {
-        var result = SolverPart2.Execute(Sample());
-        Assert.Equal(4, result);
+        Assert.Equal(4, SolverPart2.Execute(Sample()));
     }
     
     [Fact]
     public void Part2_Real()
     {
-        var result = SolverPart2.Execute(Inputs());
-        Assert.Equal(857, result);
+        Assert.Equal(857, SolverPart2.Execute(Inputs()));
     }
 }

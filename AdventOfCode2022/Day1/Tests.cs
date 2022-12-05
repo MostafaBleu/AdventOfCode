@@ -12,8 +12,7 @@ public class Tests : TestsBase
     public void Part1(string? input, int expected)
     {
         var lines = input != null ? input.Split(',') : Inputs();
-        var result = SolverPart1.Execute(lines);
-        Assert.Equal(expected, result);
+        Assert.Equal(expected, SolverPart1.Execute(lines));
     }
     
     [Theory]
@@ -22,9 +21,6 @@ public class Tests : TestsBase
     public void Part2(string? input, int? expected)
     {
         var lines = input != null ? input.Split(',') : Inputs();
-        var result = SolverPart2.Execute(lines);
-        Assert.Equal(expected, result);
+        Assert.Equal(expected, SolverPart2.Execute(lines));
     }
-
-    
 }

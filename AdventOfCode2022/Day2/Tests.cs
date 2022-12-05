@@ -11,15 +11,13 @@ public class Tests : TestsBase
     public void Part1_Example(string input, int expected)
     {
         var lines = input.Split(',');
-        var result = SolverPart1.Execute(lines);
-        Assert.Equal(expected, result);
+        Assert.Equal(expected, SolverPart1.Execute(lines));
     }
     
     [Fact]
     public void Part1_Real()
     {
-        var result = SolverPart1.Execute(Inputs());
-        Assert.Equal(14531, result);
+        Assert.Equal(14531, SolverPart1.Execute(Inputs()));
     }
     
     [Theory]
@@ -27,14 +25,12 @@ public class Tests : TestsBase
     public void Part2_Example(string input, int expected)
     {
         var lines = input.Split(',');
-        var result = SolverPart2.Execute(lines);
-        Assert.Equal(expected, result);
+        Assert.Equal(expected, SolverPart2.Execute(lines));
     }
     
     [Fact]
     public void Part2_Real()
     {
-        var result = SolverPart2.Execute(Inputs());
-        Assert.Equal(11258, result);
+        Assert.Equal(11258, SolverPart2.Execute(Inputs()));
     }
 }

@@ -2,25 +2,15 @@ namespace AdventOfCode2022.Day2;
 
 public static class SolverPart1
 {
-    //A -> Rock  X
-    //B -> Paper Y
-    // C -> Scissors Z
-    
-    // Shape + Result
-    // 0 -> Draw
-    // 3 -> Lost
-    // 6 -> Won
     public static int Execute(string[] inputs)
     {
         var Score = 0;
-
         foreach (var input in inputs)
         {
             var op = input[0];
             var me = input[2];
 
             Score += Compare(op, me) + handValue[me];
-
         }
         return Score;
     }
